@@ -1,0 +1,27 @@
+.main-footer {
+  min-height: 240px;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 280px;
+  gap: 36px;
+  padding-top: 40px;
+}
+
+.main-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.main-footer--background {
+  background-color: #f2f2f2;
+}
+
+.main-footer__logo {
+  fill: #444444;
+}

@@ -1,0 +1,16 @@
+.social-list {
+  display: flex;
+  gap: 24px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-list__item {
+  width: 28px;
+  height: 22px;
+}
+
+.social-link__svg {
+  fill: #666666;
+}
