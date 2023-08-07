@@ -1,0 +1,74 @@
+.offer {
+  width: 320px;
+}
+
+.offer__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.offer__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offer__item {
+  padding-top: 30px;
+  background-color: #f2f2f2;
+  margin-top: 20px;
+  min-height: 266px;
+  box-sizing: border-box;
+}
+
+.offer__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.offer__title--first {
+  position: relative;
+  padding-left: 9px;
+}
+
+.offer__title--first::after {
+  position: absolute;
+  content: "";
+  background-image: url("../img/cat-slim.svg");
+  width: 36px;
+  height: 50px;
+  top: -9px;
+  left: 27px;
+}
+
+.offer__title--second {
+  position: relative;
+  padding-left: 37px;
+}
+
+.offer__title--second::after {
+  position: absolute;
+  content: "";
+  background-image: url("../img/cat-pro.svg");
+  background-repeat: no-repeat;
+  width: 67px;
+  height: 28px;
+  top: 5px;
+  left: 13px;
+}
+
+.offer__description {
+  margin-top: 29px;
+  margin-bottom: 31px;
+  padding-left: 20px;
+  padding-right: 33px;
+}
+
+.offer__button {
+  min-width: 134px;
+  padding-left: 20px;
+}
