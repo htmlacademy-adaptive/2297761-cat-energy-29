@@ -38,7 +38,7 @@
 .offer__title--first::after {
   position: absolute;
   content: "";
-  background-image: url("/source/img/cat-slim.svg");
+  background-image: url("../img/cat-slim.svg");
   width: 36px;
   height: 50px;
   top: -9px;
@@ -53,7 +53,7 @@
 .offer__title--second::after {
   position: absolute;
   content: "";
-  background-image: url("/source/img/cat-pro.svg");
+  background-image: url("../img/cat-pro.svg");
   background-repeat: no-repeat;
   width: 67px;
   height: 28px;
