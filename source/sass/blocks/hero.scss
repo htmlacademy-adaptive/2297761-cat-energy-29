@@ -1,6 +1,8 @@
+@use "../global/variables.scss" as v;
+
 .hero {
   min-height: 480px;
-  background: linear-gradient(#68b738d9 63%, #ffffff 37%);
+  background: linear-gradient(v.$basic-green 63%, #ffffff 37%);
 }
 
 .hero__wrapper {

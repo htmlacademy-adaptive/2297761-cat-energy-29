@@ -1,3 +1,5 @@
+@use "../mixins/media.scss" as m;
+
 .main-header {
   position: relative;
   display: flex;
@@ -7,4 +9,16 @@
   min-height: 59px;
   align-items: center;
   background-color: #ffffff;
+
+  @include m.phone {
+    background-color: #00ffff;
+  }
+
+  @include m.tablet {
+    background-color: #ff0000;
+  }
+
+  @include m.desktop {
+    background-color: #008000;
+  }
 }

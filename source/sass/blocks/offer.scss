@@ -1,3 +1,5 @@
+@use "../global/variables.scss" as v;
+
 .offer {
   width: 320px;
 }
@@ -15,7 +17,7 @@
 
 .offer__item {
   padding-top: 30px;
-  background-color: #f2f2f2;
+  background-color: v.$basic-gray;
   margin-top: 20px;
   min-height: 266px;
   box-sizing: border-box;
