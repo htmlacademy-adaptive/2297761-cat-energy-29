@@ -1,3 +1,6 @@
+@use "../mixins/media.scss" as m;
+@use "../global/variables.scss" as v;
+
 .main-nav__list {
   display: none;
   list-style-type: none;
@@ -6,4 +9,24 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+
+  @include m.tablet {
+    display: flex;
+    gap: 33px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.main-nav__toggle {
+  display: flex;
+
+  @include m.tablet {
+    display: none;
+  }
+}
+
+.site-list__item--current {
+  border-bottom: 2px solid v.$basic-green;
+  padding-bottom: 5px;
 }

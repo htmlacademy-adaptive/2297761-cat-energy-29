@@ -1,12 +1,28 @@
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
 .example {
-  width: 320px;
   background-color: #eaeaea;
+
+  @include m.tablet {
+    background-color: #ffffff;
+  }
 }
 
 .example__wrapper {
   width: 280px;
   margin: 0 auto;
   padding-top: 25px;
+
+  @include m.tablet {
+    width: 708px;
+  }
+
+  @include m.desktop {
+    width: 1220px;
+    display: flex;
+    gap: 100px;
+  }
 }
 
 .example__number {
@@ -15,7 +31,11 @@
   font-weight: 400;
   line-height: 24px;
   text-transform: uppercase;
-  padding-top: 19px;
+
+  @include m.desktop {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__list {
@@ -45,6 +65,11 @@
   font-weight: 400;
   line-height: 100%;
   color: #444444;
+
+  @include m.desktop {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .example__sum {
@@ -55,4 +80,57 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
+
+  @include m.tablet {
+    width: 132px;
+    text-align: end;
+  }
+
+  @include m.desktop {
+    font-size: 20px;
+    width: auto;
+  }
+}
+
+.example__wrapper-list {
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    flex-direction: row;
+    padding-top: 19px;
+    justify-content: space-between;
+  }
+
+  @include m.desktop {
+    flex-direction: column;
+  }
+}
+
+.example__container {
+  width: 280px;
+
+  @include m.tablet {
+    width: 708px;
+  }
+
+  @include m.desktop {
+    width: 436px;
+  }
+}
+
+.example__sum-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include m.tablet {
+    flex-direction: column;
+  }
+
+  @include m.desktop {
+    gap: 63px;
+    flex-direction: row;
+    justify-content: unset;
+  }
 }

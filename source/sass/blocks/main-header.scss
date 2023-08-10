@@ -1,4 +1,5 @@
 @use "../mixins/media.scss" as m;
+@use "../global/variables.scss" as v;
 
 .main-header {
   position: relative;
@@ -8,17 +9,22 @@
   margin: 0 auto;
   min-height: 59px;
   align-items: center;
-  background-color: #ffffff;
-
-  @include m.phone {
-    background-color: #00ffff;
-  }
 
   @include m.tablet {
-    background-color: #ff0000;
+    background-color: #ffffff;
+    width: 100%;
   }
+}
+
+.main-header--main {
+  background-color: #ffffff;
 
   @include m.desktop {
-    background-color: #008000;
+    background: linear-gradient(to right, #ffffff 50%, v.$basic-green 50%);
+    width: 100%;
   }
+}
+
+.main-header--form {
+  background-color: #ffffff;
 }

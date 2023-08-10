@@ -1,6 +1,17 @@
+@use "../mixins/media.scss" as m;
+
 .page-body {
   width: 320px;
   margin: 0 auto;
+  padding: 0 20px;
   font-family: "Oswald", sans-serif;
   background-color: #ffffff;
+
+  @include m.tablet {
+    width: 100%;
+  }
+
+  @include m.desktop {
+    width: 100%;
+  }
 }

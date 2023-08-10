@@ -1,6 +1,15 @@
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+
 .main-title {
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
+
+  @include m.tablet {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
