@@ -7,12 +7,12 @@
 @use "./blocks/site-list.scss";
 @use "./global/link.scss";
 @use "./blocks/hero.scss";
-@use "./global/button.scss";
+@use "./blocks/button.scss";
 @use "./blocks/offer.scss";
 @use "./global/fonts.scss";
 @use "./blocks/benefits.scss";
 @use "./global/section-title.scss";
-@use "./global/section-description.scss";
+@use "./blocks/section-description.scss";
 @use "./blocks/example.scss";
 @use "./blocks/contacts.scss";
 @use "./blocks/map.scss";
@@ -27,3 +27,4 @@
 @use "./blocks/card.scss";
 @use "./blocks/secondary-catalog.scss";
 @use "./blocks/gift.scss";
+@use "./global/setup.scss";

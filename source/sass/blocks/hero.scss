@@ -1,6 +1,19 @@
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
 .hero {
   min-height: 480px;
-  background: linear-gradient(#68b738d9 63%, #ffffff 37%);
+  background: linear-gradient(v.$basic-green 63%, #ffffff 37%);
+
+  @include m.tablet {
+    min-height: 875px;
+    background: #ffffff;
+  }
+
+  @include m.desktop {
+    min-height: 480px;
+    background: linear-gradient(to left, v.$basic-green 50%, #ffffff 50%);
+  }
 }
 
 .hero__wrapper {
@@ -12,6 +25,15 @@
   margin: 0 auto;
   padding-top: 27px;
   text-align: center;
+
+  @include m.tablet {
+    width: 100%;
+    margin: 0;
+    padding-top: 47px;
+    padding-left: 94px;
+    text-align: start;
+    justify-content: normal;
+  }
 }
 
 .hero__title {
@@ -23,6 +45,21 @@
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
+
+  @include m.tablet {
+    width: 416px;
+    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    text-align: start;
+  }
+
+  @include m.desktop {
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+  }
 }
 
 .hero__slogan {
@@ -31,4 +68,17 @@
   text-transform: uppercase;
   font-size: 14px;
   line-height: 14px;
+
+  @include m.tablet {
+    margin-bottom: 51px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  @include m.desktop {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
 }

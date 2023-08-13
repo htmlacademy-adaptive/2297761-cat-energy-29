@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page-body">
-  <header class="main-header page-body__container">
+  <header class="main-header main-header--main">
     <a class="logo-image" href="./index.html">
       <img class="logo-image__logo-image" src="./img/logomob-img.svg" alt="Супер-кот." width="33" height="38">
       <img class="logo-image__logo-text" src="./img/logo-text.svg" alt="Cat energy" width="101" height="18">
@@ -30,7 +31,7 @@
       </ul>
     </nav>
   </header>
-  <main class="main-container page-body__container">
+  <main class="main-container">
     <section class="hero">
       <div class="hero__wrapper">
         <div class="hero__header">
@@ -87,21 +88,26 @@
     <section class="example">
       <div class="example__wrapper">
         <h2 class="visually-hidden">Пример использования продукта</h2>
-        <p class="section-title">Живой пример</p>
-        <p class="example__description section-description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-          16 часов в день.</p>
-        <dl class="example__list">
-          <div class="example__item">
-            <dt class="example__number">5 кг</dt>
-            <dd class="example__description-title">снижение веса</dd>
+        <div class="example__container">
+          <p class="section-title">Живой пример</p>
+          <p class="example__description section-description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="example__wrapper-list">
+            <dl class="example__list">
+              <div class="example__item">
+                <dt class="example__number">5 кг</dt>
+                <dd class="example__description-title">снижение веса</dd>
+              </div>
+              <div class="example__item">
+                <dt class="example__number">60 дней</dt>
+                <dd class="example__description-title">затрачено времени</dd>
+              </div>
+            </dl>
+            <div class="example__sum-wrapper">
+              <p class="example__sum">Затраты на питание:</p>
+              <p class="example__sum">15 000 РУБ.</p>
+            </div>
           </div>
-          <div class="example__item">
-            <dt class="example__number">60 дней</dt>
-            <dd class="example__description-title">затрачено времени</dd>
-          </div>
-        </dl>
-        <p class="example__sum">Затраты на питание: 15 000 РУБ.</p>
+        </div>
         <div class="example__compare-container">
           <div class="visualization">
             <img class="visualization__image" src="./img/fat-cat.png" width="560" height="512" alt="Толстый кот.">
@@ -117,7 +123,10 @@
       <div class="contacts__wrapper">
         <h2 class="visually-hidden">Адрес магазина</h2>
         <p class="contacts__slogan contacts__item">приглашаем <br> к сотрудничеству дилеров!</p>
-        <p class="contacts__text contacts__item">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="contacts__text contacts__item">
+          <p class="contacts__text-item">ул. Большая Конюшенная, д. 19/8</p>
+          <p class="contacts__text-item">Санкт-Петербург</p>
+        </div>
       </div>
       <div class="map">
         <img class="map__image" src="./img/map-logo.png" alt="Логотип-метка интернет-магазина Cat Energy." width="57" height="53">
