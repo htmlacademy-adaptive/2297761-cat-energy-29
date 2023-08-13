@@ -1,11 +1,43 @@
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
 .secondary-catalog {
   width: 280px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    width: auto;
+  }
+
+  @include m.desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.secondary-catalog__wrapper {
+  width: auto;
+
+  @include m.tablet {
+    width: 632px;
+    margin: auto;
+  }
+
+  @include m.desktop {
+    width: 100%;
+  }
 }
 
 .secondary-catalog__title {
   font-weight: 400;
   line-height: 24px;
+
+  @include m.tablet {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .secondary-catalog__list {
@@ -13,6 +45,10 @@
   margin: 0;
   padding: 0;
   margin-bottom: 35px;
+
+  @include m.desktop {
+    margin-right: 81px;
+  }
 }
 
 .secondary-card {
@@ -22,6 +58,11 @@
   padding-top: 13px;
   padding-bottom: 19px;
   box-sizing: border-box;
+
+  @include m.desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .secondary-card__title {
@@ -32,7 +73,16 @@
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
-  color: #222222;
+  color: v.$special_dark-grey-2;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include m.desktop {
+    width: 200px;
+  }
 }
 
 .secondary-card__data {
@@ -41,10 +91,21 @@
   font-style: normal;
   font-weight: 400;
   line-height: 14px;
-  color: #444444;
+  color: v.$special_dark-grey;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .secondary-card__wrapper {
   display: flex;
   justify-content: space-between;
+
+  @include m.desktop {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
 }

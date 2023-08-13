@@ -1,7 +1,18 @@
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
 .form {
   width: 280px;
   margin: 0 auto;
   padding-top: 32px;
+
+  @include m.tablet {
+    width: 768px;
+  }
+
+  @include m.desktop {
+    width: 1220px;
+  }
 }
 
 .form__description {
@@ -12,6 +23,11 @@
   font-weight: 400;
   line-height: 18px;
   margin-bottom: 39px;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__section-title {
@@ -21,6 +37,11 @@
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+
+  @include m.tablet {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .form__title {
@@ -34,13 +55,22 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  color: #444444;
+  color: v.$special_dark-grey;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .form__line {
   display: flex;
   gap: 13px;
   align-items: center;
+
+  @include m.tablet {
+    width: 570px;
+  }
 }
 
 .form__input {
@@ -58,7 +88,12 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  color: #444444;
+  color: v.$special_dark-grey;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .form__control {
@@ -76,9 +111,14 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  color: #444444;
+  color: v.$special_dark-grey;
   padding-left: 15px;
   padding-top: 14px;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__button-style {
@@ -88,8 +128,52 @@
   line-height: 20px;
   font-family: "Oswald", sans-serif;
   margin-bottom: 21px;
+  width: 100%;
+
+  @include m.tablet {
+    width: 50%;
+  }
 }
 
 .form__button {
   margin-bottom: 32px;
+
+  @include m.tablet {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+  }
+}
+
+
+.form__control-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+
+  @include m.desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.fieldset__control {
+  width: 280px;
+
+  @include m.tablet {
+    width: 628px;
+  }
+
+  @include m.desktop {
+    width: 570px;
+  }
 }

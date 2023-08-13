@@ -3,38 +3,48 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page-body">
-  <header class="main-header page-body__container">
-    <a class="logo-image" href="./index.html">
-      <img class="logo-image__logo-image" src="./img/logomob-img.svg" alt="Супер-кот." width="33" height="38">
-      <img class="logo-image__logo-text" src="./img/logo-text.svg" alt="Cat energy" width="101" height="18">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
+  <header class="main-header main-header--form">
+    <div class="main-header__wrapper page-body__container">
+      <a class="logo-image" href="./index.html">
+        <picture class="logo-image__logo-container">
+          <source class="logo-image__logo-desktop" width="202" height="59" srcset="./img/logo-desktop.svg"
+            media="(min-width: 1440px)">
+          <source class="logo-image__logo-tablet" width="174" height="50" srcset="./img/logo-tablet.svg"
+            media="(min-width: 768px)">
+          <img class="logo-image__logo-phone" src="./img/logomob-img.svg" width="33" height="38"
+            alt="Cat energy.">
+        </picture>
+        <img class="logo-image__logo-text" src="./img/logo-text.svg" alt="Cat energy" width="101" height="18">
+      </a>
+      <button class="toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--current">
-          <a class="site-list__link link" href="#">Главная</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link link" href="#">каталог продукции</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link link" href="#">подбор программы</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="main-nav main-nav--form">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link link" href="./index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link link" href="./catalog.html">каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link link site-list__item--current" href="./form.html">подбор программы</a>
+            </li>
+          </ul>
+      </nav>
+    </div>
   </header>
   <main class="main-container">
     <form class="form" action="#" method="post">
       <h1 class="main-title form__title">Подбор программы</h1>
       <p class="form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-      <fieldset class="fieldset">
+      <div class="form__container"><fieldset class="fieldset">
           <div class="form__line">
             <label class="form__label" for="name">Имя:*</label>
             <input class="form__input" type="text" name="name" placeholder="Барсик" id="name" required>
@@ -48,7 +58,7 @@
             <input class="form__input" type="number" name="age" placeholder="7" id="age" min="0" max="125" required>
           </div>
       </fieldset>
-      <fieldset class="fieldset">
+      <fieldset class="fieldset fieldset__control">
         <div class="form__control">
           <input class="form__control-input" type="radio" name="reason" id="fit" value="похудение" checked>
           <label class="form__label" for="fit">похудение</label>
@@ -62,6 +72,7 @@
           <label class="form__label" for="question">Не знаю (Нужен ваш совет)</label>
         </div>
       </fieldset>
+      </div>>
       <fieldset class="fieldset">
         <h2 class="form__section-title ">Контактные данные (владельца кота)</h2>
         <div class="form__line">
@@ -79,8 +90,9 @@
       </div>
       <fieldset class="fieldset">
         <h2 class="form__section-title">Дополнительно</h2>
-        <div class="form__control">
-          <input class="form__control-input" type="checkbox" name="sweetener" id="sweetener" checked>
+        <div class="form__control-wrapper">
+          <div class="form__control">
+          <input class="form__control-input" type="checkbox" name="sweetener" id="sweetener" checked="">
           <label class="form__label" for="sweetener">сахарозаменитель</label>
         </div>
         <div class="form__control">
@@ -95,6 +107,7 @@
           <input class="form__control-input" type="checkbox" name="vitamins" id="vitamins">
           <label class="form__label" for="vitamins">витамины</label>
         </div>
+      </div>
       </fieldset>
       <div class="form__button">
         <button class="button--type-primary button form__button-style" type="submit">отправить заявку</button>

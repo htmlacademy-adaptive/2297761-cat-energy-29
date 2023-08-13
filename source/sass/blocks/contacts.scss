@@ -1,3 +1,6 @@
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
 .contacts__wrapper {
   display: flex;
   width: 280px;
@@ -5,10 +8,33 @@
   min-height: 112px;
   padding-top: 27px;
   box-sizing: border-box;
+
+  @include m.tablet {
+    width: 708px;
+    justify-content: space-between;
+  }
+
+  @include m.desktop {
+    margin-top: 92px;
+    z-index: 2;
+    width: 556px;
+    min-height: 199px;
+    padding: 60px 78px 60px 80px;
+    position: absolute;
+    background-color: v.$basic-text;
+    left: 139px;
+  }
 }
 
 .contacts__item {
   width: 140px;
+
+  @include m.tablet {
+    width: 156px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .contacts__slogan {
@@ -19,6 +45,11 @@
   line-height: 20px;
   text-transform: uppercase;
   color: #111111;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__text {
@@ -28,9 +59,18 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  color: #444444;
+  color: v.$special_dark-grey;
+
+  @include m.tablet {
+    text-align: end;
+  }
 }
 
 .contacts--background {
   background-color: #f2f2f2;
+}
+
+.contacts__text-item {
+  padding: 0;
+  margin: 0;
 }

@@ -1,10 +1,17 @@
-.offer {
-  width: 320px;
-}
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
 
 .offer__wrapper {
   width: 280px;
   margin: 0 auto;
+
+  @include m.tablet {
+    width: 708px;
+  }
+
+  @include m.desktop {
+    width: 1220px;
+  }
 }
 
 .offer__list {
@@ -13,12 +20,38 @@
   margin: 0;
 }
 
+.offer-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+  }
+}
+
 .offer__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
   padding-top: 30px;
-  background-color: #f2f2f2;
-  margin-top: 20px;
+  background-color: v.$basic-gray;
   min-height: 266px;
   box-sizing: border-box;
+
+  @include m.tablet {
+    padding-top: 77px;
+    padding-left: 52px;
+    min-height: 372px;
+  }
+
+  @include m.desktop {
+    width: 570px;
+  }
 }
 
 .offer__title {
@@ -28,11 +61,24 @@
   line-height: 37px;
   text-transform: uppercase;
   text-align: center;
+
+  @include m.tablet {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .offer__title--first {
   position: relative;
-  padding-left: 9px;
+  margin-left: 89px;
+
+  @include m.tablet {
+    margin-left: 0;
+  }
+
+  @include m.desktop {
+    margin-left: 221px;
+  }
 }
 
 .offer__title--first::after {
@@ -42,12 +88,64 @@
   width: 36px;
   height: 50px;
   top: -9px;
-  left: 27px;
+  left: -61px;
+
+  @include m.tablet {
+    width: 140px;
+    height: 194px;
+    background-size: 140px 194px;
+    background-repeat: no-repeat;
+    top: -9px;
+    left: 453px;
+  }
+
+  @include m.desktop {
+    width: 70px;
+    height: 97px;
+    background-size: 70px 97px;
+    background-repeat: no-repeat;
+    top: -55px;
+    left: -206px;
+  }
+}
+
+.offer__title--first::before {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  background-color: v.$basic-green;
+  z-index: 0;
+  width: 50px;
+  height: 50px;
+  right: 128px;
+  top: -9px;
+
+  @include m.tablet {
+    width: 200px;
+    height: 200px;
+    right: -450px;
+    top: -9px;
+  }
+
+  @include m.desktop {
+    width: 100px;
+    height: 100px;
+    right: 280px;
+    top: -54px;
+  }
 }
 
 .offer__title--second {
   position: relative;
-  padding-left: 37px;
+  margin-left: 91px;
+
+  @include m.tablet {
+    margin-left: 0;
+  }
+
+  @include m.desktop {
+    margin-left: 221px;
+  }
 }
 
 .offer__title--second::after {
@@ -58,7 +156,51 @@
   width: 67px;
   height: 28px;
   top: 5px;
-  left: 13px;
+  left: -78px;
+
+  @include m.tablet {
+    width: 268px;
+    height: 112px;
+    background-size: 268px 112px;
+    background-repeat: no-repeat;
+    top: -9px;
+    left: 354px;
+  }
+
+  @include m.desktop {
+    width: 134px;
+    height: 56px;
+    background-size: 134px 56px;
+    background-repeat: no-repeat;
+    top: -9px;
+    left: -224px;
+  }
+}
+
+.offer__title--second::before {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  background-color: v.$basic-green;
+  z-index: 0;
+  width: 50px;
+  height: 50px;
+  right: 152px;
+  top: -6px;
+
+  @include m.tablet {
+    width: 200px;
+    height: 200px;
+    right: -413px;
+    top: -45px;
+  }
+
+  @include m.desktop {
+    width: 100px;
+    height: 100px;
+    right: 301px;
+    top: -46px;
+  }
 }
 
 .offer__description {
@@ -66,9 +208,22 @@
   margin-bottom: 31px;
   padding-left: 20px;
   padding-right: 33px;
+
+  @include m.tablet {
+    padding: 0;
+    width: 340px;
+  }
+
+  @include m.desktop {
+    width: 457px;
+  }
 }
 
 .offer__button {
   min-width: 134px;
   padding-left: 20px;
+
+  @include m.tablet {
+    padding-left: 0;
+  }
 }

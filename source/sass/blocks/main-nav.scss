@@ -1,9 +1,57 @@
-.main-nav__list {
+@use "../mixins/media.scss" as m;
+@use "../global/variables.scss" as v;
+
+
+.main-nav {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  min-height: 198px;
+  background-color: #ffffff;
+  z-index: 3;
   display: none;
+
+  @include m.tablet {
+    position: static;
+    display: block;
+    width: auto;
+    min-height: 50px;
+  }
+
+  @include m.desktop {
+    position: static;
+    display: block;
+    width: auto;
+    min-height: 59px;
+    background-color: v.$basic-green;
+  }
+}
+
+.main-nav--catalog {
+  background-color: v.$basic-text;
+}
+
+.main-nav--form {
+  background-color: v.$basic-text;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  align-items: center;
+
+  @include m.tablet {
+    display: flex;
+    flex-direction: row;
+    gap: 33px;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
+

@@ -1,10 +1,39 @@
+@use "../mixins/media.scss" as m;
+@use "../global/variables.scss" as v;
+
 .main-header {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 280px;
   margin: 0 auto;
   min-height: 59px;
+
+  @include m.tablet {
+    background-color: v.$basic-text;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  @include m.desktop {
+    display: flex;
+  }
+}
+
+.main-header--main {
+  background-color: v.$basic-text;
+
+  @include m.desktop {
+    background: linear-gradient(to right, v.$basic-text 50%, v.$basic-green 50%);
+    width: 100%;
+  }
+}
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
+}
+
+.main-header--form {
+  background-color: v.$basic-text;
 }
