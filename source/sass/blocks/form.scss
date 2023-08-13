@@ -55,7 +55,7 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  color: #444444;
+  color: v.$special_dark-grey;
 
   @include m.tablet {
     font-size: 20px;
@@ -88,7 +88,7 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  color: #444444;
+  color: v.$special_dark-grey;
 
   @include m.tablet {
     font-size: 20px;
@@ -111,7 +111,7 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  color: #444444;
+  color: v.$special_dark-grey;
   padding-left: 15px;
   padding-top: 14px;
 
@@ -128,6 +128,11 @@
   line-height: 20px;
   font-family: "Oswald", sans-serif;
   margin-bottom: 21px;
+  width: 100%;
+
+  @include m.tablet {
+    width: 50%;
+  }
 }
 
 .form__button {
@@ -139,6 +144,7 @@
     align-items: center;
   }
 }
+
 
 .form__control-wrapper {
   display: flex;

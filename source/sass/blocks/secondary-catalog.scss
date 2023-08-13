@@ -73,7 +73,7 @@
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
-  color: #222222;
+  color: v.$special_dark-grey-2;
 
   @include m.tablet {
     font-size: 20px;
@@ -91,7 +91,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 14px;
-  color: #444444;
+  color: v.$special_dark-grey;
 
   @include m.tablet {
     font-size: 16px;

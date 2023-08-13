@@ -3,16 +3,18 @@
 
 .hero {
   min-height: 480px;
-  background: linear-gradient(v.$basic-green 63%, #ffffff 37%);
+  background: linear-gradient(v.$basic-green 63%, v.$basic-text 37%);
+  margin-bottom: 20px;
 
   @include m.tablet {
     min-height: 875px;
-    background: #ffffff;
+    background: v.$basic-text;
   }
 
   @include m.desktop {
     min-height: 480px;
-    background: linear-gradient(to left, v.$basic-green 50%, #ffffff 50%);
+    background: linear-gradient(to left, v.$basic-green 50%, v.$basic-text 50%);
+    margin-bottom: 80px;
   }
 }
 
@@ -39,7 +41,7 @@
 .hero__title {
   margin: 0;
   margin-bottom: 25px;
-  color: #ffffff;
+  color: v.$basic-text;
   text-align: center;
   font-size: 36px;
   font-style: normal;
@@ -64,7 +66,7 @@
 
 .hero__slogan {
   margin: 0;
-  color: #ffffff;
+  color: v.$basic-text;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 14px;
@@ -82,3 +84,27 @@
     color: #000000;
   }
 }
+
+.hero__header {
+  position: relative;
+}
+
+.hero__img-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    z-index: 1;
+    position: absolute;
+    top: 32%;
+    left: 12%;
+  }
+
+  @include m.desktop {
+    z-index: 3;
+    position: absolute;
+    top: 9%;
+    left: 37%;
+  }
+}
+

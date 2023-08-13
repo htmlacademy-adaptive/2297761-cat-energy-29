@@ -1,3 +1,5 @@
+@use "../global/variables.scss" as v;
+
 .social-list {
   display: flex;
   gap: 24px;
@@ -12,5 +14,5 @@
 }
 
 .social-link__svg {
-  fill: #666666;
+  fill: v.$special_grey-2;
 }

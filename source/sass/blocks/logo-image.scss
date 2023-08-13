@@ -4,8 +4,21 @@
   width: 190px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo-image__logo-image {
   margin: 0;
+}
+
+.logo-image__logo-text {
+  display: block;
+
+  @include m.tablet {
+    display: none;
+  }
+
+  @include m.desktop {
+    display: none;
+  }
 }
