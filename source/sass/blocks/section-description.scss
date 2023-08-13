@@ -7,7 +7,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  color: #444444;
+  color: v.$special_dark-grey;
 
   @include m.tablet {
     font-size: 16px;

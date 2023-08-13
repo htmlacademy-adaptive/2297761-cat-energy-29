@@ -5,7 +5,7 @@
   background-color: #eaeaea;
 
   @include m.tablet {
-    background-color: #ffffff;
+    background-color: v.$basic-text;
   }
 }
 
@@ -64,7 +64,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
-  color: #444444;
+  color: v.$special_dark-grey;
 
   @include m.desktop {
     font-size: 14px;

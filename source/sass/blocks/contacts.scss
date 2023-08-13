@@ -21,7 +21,7 @@
     min-height: 199px;
     padding: 60px 78px 60px 80px;
     position: absolute;
-    background-color: #ffffff;
+    background-color: v.$basic-text;
     left: 139px;
   }
 }
@@ -59,7 +59,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  color: #444444;
+  color: v.$special_dark-grey;
 
   @include m.tablet {
     text-align: end;

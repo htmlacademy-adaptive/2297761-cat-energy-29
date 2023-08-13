@@ -16,7 +16,7 @@
     width: 324px;
     min-height: 511px;
     padding: 0 37px 40px;
-    background: linear-gradient(transparent 20%, #cdcdcd 80%);
+    background: linear-gradient(transparent 20%, v.$special_grey 80%);
   }
 
   @include m.desktop {
@@ -45,7 +45,7 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  color: #222222;
+  color: v.$special_dark-grey-2;
   margin: 0;
   margin-bottom: 14px;
 
@@ -83,7 +83,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
-  color: #444444;
+  color: v.$special_dark-grey;
 
   @include m.tablet {
     font-size: 16px;

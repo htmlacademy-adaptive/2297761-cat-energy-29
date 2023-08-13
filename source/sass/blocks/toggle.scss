@@ -1,0 +1,15 @@
+@use "../mixins/media.scss" as m;
+@use "../global/variables.scss" as v;
+
+.toggle {
+  display: flex;
+  background-image: url("../img/header-toggle.svg");
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: v.$basic-text;
+
+  @include m.tablet {
+    display: none;
+  }
+}
