@@ -5,6 +5,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include m.desktop {
+    width: 202px;
+  }
 }
 
 .logo-image__logo-image {
@@ -13,6 +17,7 @@
 
 .logo-image__logo-text {
   display: block;
+  height: 18px;
 
   @include m.tablet {
     display: none;

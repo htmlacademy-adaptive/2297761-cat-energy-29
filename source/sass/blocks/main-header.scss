@@ -21,17 +21,16 @@
 
 .main-header--main {
   background-color: v.$basic-text;
+  align-items: center;
+  display: flex;
 
-  @include m.desktop {
-    background: linear-gradient(to right, v.$basic-text 50%, v.$basic-green 50%);
-    width: 100%;
-  }
 }
 
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .main-header--form {

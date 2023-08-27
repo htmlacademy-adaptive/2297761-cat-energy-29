@@ -1,3 +1,6 @@
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
 .fieldset {
   display: flex;
   flex-direction: column;
@@ -6,4 +9,35 @@
   padding: 0;
   gap: 14px;
   padding-bottom: 24px;
+}
+
+.fieldset__control {
+  width: 280px;
+
+  @include m.tablet {
+    width: 628px;
+    border: 1px solid #e7e7e7;
+    padding-left: 25px;
+    padding-top: 28px;
+  }
+
+  @include m.desktop {
+    width: 570px;
+  }
+}
+
+.fieldset__control::after {
+  position: absolute;
+  content: "";
+  border: 1px solid #D9D9D9;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  min-height: 150px;
+  right: 0;
+  top: 53%;
+
+  @include m.tablet {
+   display: none;
+  }
 }

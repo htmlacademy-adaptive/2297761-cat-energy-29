@@ -30,15 +30,60 @@
   }
 }
 
-.secondary-catalog__title {
-  font-weight: 400;
+.secondary-catalog__name-wrapper {
+  display: flex;
+  gap: 20px;
   line-height: 24px;
+  font-size: 24px;
+  font-weight: 400;
 
   @include m.tablet {
-    font-size: 36px;
+    gap: 40px;
     line-height: 36px;
+    font-size: 36px;
   }
 }
+
+.secondary-catalog__name-wrapper::after {
+  content: "";
+  height: 15px;
+  width: 10px;
+  border-bottom: 2px solid #000000;
+  flex-grow: 1;
+
+  @include m.tablet {
+    height: 22px;
+  }
+}
+
+.secondary-catalog__name-wrapper::before {
+  content: "";
+  height: 15px;
+  width: calc(50% - 160px);
+  border-bottom: 2px solid #000000;
+
+  @include m.tablet {
+    height: 22px;
+    width: calc(50% - 354px);
+  }
+}
+
+.secondary-catalog__name-title {
+  max-width: 187px;
+
+  @include m.tablet {
+    max-width: max-content;
+  }
+}
+//.secondary-catalog__title {
+//font-weight: 400;
+//line-height: 24px;
+
+//@include m.tablet {
+//font-size: 36px;
+//line-height: 36px;
+// }
+//}
 
 .secondary-catalog__list {
   list-style-type: none;

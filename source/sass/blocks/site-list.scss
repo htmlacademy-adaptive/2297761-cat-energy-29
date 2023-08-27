@@ -1,8 +1,26 @@
 @use "../mixins/media.scss" as m;
 @use "../global/variables.scss" as v;
 
-.site-list__link {
+.site-list a {
+  display: flex;
+  justify-content: space-around;
+  min-height: 66px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  align-items: center;
   color: #000000;
+  border-top: 1px solid #e6e6e6;
+
+  @include m.tablet {
+    border-top: none;
+  }
+
+  @include m.desktop {
+   color: #ffffff;
+  }
 }
 
 .site-list__item--current {
@@ -11,6 +29,10 @@
   @include m.tablet {
     border-bottom: 2px solid v.$basic-green;
     padding-bottom: 5px;
+  }
+
+  @include m.desktop {
+    border-bottom: 2px solid #ffffff;
   }
 }
 
