@@ -56,14 +56,14 @@
   @include m.tablet {
     position: static;
     display: flex;
+    padding-top: 10px;
     align-items: flex-end;
   }
 
   @include m.desktop {
     background-color: transparent;
-   }
+  }
 }
-
 
 .main-nav--catalog {
   background-color: v.$basic-text;
@@ -74,16 +74,15 @@
 }
 
 .main-nav--form .site-list a {
-
   @include m.desktop {
     color: #000000;
-   }
+  }
 }
 
 .main-nav--form .site-list__item--current {
   @include m.desktop {
     border-bottom: 2px solid v.$basic-green;
-   }
+  }
 }
 
 .main-nav__list {
@@ -97,6 +96,7 @@
     min-height: 50px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 33px;
     font-size: 18px;
     line-height: 24px;
@@ -104,32 +104,19 @@
 
   @include m.desktop {
     position: relative;
-    display: flex;
+    align-items: flex-end;
     width: auto;
     min-height: 59px;
     background-color: transparent;
   }
 }
 
-.main-nav__toggle {
-  content: "";
-  position: absolute;
-  top: -42px;
-  right: 29px;
-  border: none;
-  width: 24px;
-  background-color: #ffffff;
-  height: 18px;
-  background-image: url("../img/toggle.svg");
-
-   &--closed {
-    background-image: url("../img/cros.svg");
-    background-repeat: no-repeat;
-    width: 20px;
-    height: 20px;
+.main-nav--no-js {
+  .main-header__toggle {
+    display: none;
   }
 
-  @include m.tablet {
-    display: none;
+  .main-nav {
+    display: block;
   }
 }

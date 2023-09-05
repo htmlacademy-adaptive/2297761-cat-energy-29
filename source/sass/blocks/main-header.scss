@@ -24,6 +24,9 @@
   align-items: center;
   display: flex;
 
+  @include m.desktop {
+    padding-top: 55px;
+  }
 }
 
 .main-header__wrapper {
@@ -35,4 +38,32 @@
 
 .main-header--form {
   background-color: v.$basic-text;
+
+  .site-list__link--current {
+    @include m.tablet {
+      border-bottom: 2px solid v.$basic-green;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.main-header__toggle {
+  display: flex;
+  border: none;
+  width: 24px;
+  background-color: transparent;
+  height: 18px;
+  background-image: url("../img/toggle.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  &--closed {
+    background-image: url("../img/cros.svg");
+    width: 20px;
+    height: 20px;
+  }
+
+  @include m.tablet {
+    display: none;
+  }
 }

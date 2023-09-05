@@ -6,7 +6,12 @@
   min-height: 240px;
 
   @include m.tablet {
+    display: flex;
     min-height: 147px;
+  }
+
+  @include m.desktop {
+    min-height: 169px;
   }
 }
 
@@ -19,6 +24,7 @@
 
   @include m.tablet {
     width: 708px;
+    padding-bottom: 0;
     flex-direction: row;
     justify-content: space-between;
   }

@@ -36,44 +36,31 @@
   line-height: 24px;
   font-size: 24px;
   font-weight: 400;
+  background-color: #ffffff;
 
   @include m.tablet {
-    gap: 40px;
     line-height: 36px;
     font-size: 36px;
   }
 }
 
 .secondary-catalog__name-wrapper::after {
+  position: absolute;
   content: "";
-  height: 15px;
-  width: 10px;
+  height: 70px;
+  width: 100%;
+  right: 0;
+  z-index: 1;
   border-bottom: 2px solid #000000;
   flex-grow: 1;
-
-  @include m.tablet {
-    height: 22px;
-  }
-}
-
-.secondary-catalog__name-wrapper::before {
-  content: "";
-  height: 15px;
-  width: calc(50% - 160px);
-  border-bottom: 2px solid #000000;
-
-  @include m.tablet {
-    height: 22px;
-    width: calc(50% - 354px);
-  }
 }
 
 .secondary-catalog__name-title {
-  max-width: 187px;
-
-  @include m.tablet {
-    max-width: max-content;
-  }
+  max-width: max-content;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #ffffff;
+  z-index: 10;
 }
 //.secondary-catalog__title {
 //font-weight: 400;

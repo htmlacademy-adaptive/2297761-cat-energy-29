@@ -4,7 +4,6 @@
 .site-list a {
   display: flex;
   justify-content: space-around;
-  min-height: 66px;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -13,17 +12,19 @@
   align-items: center;
   color: #000000;
   border-top: 1px solid #e6e6e6;
+  min-height: 66px;
 
   @include m.tablet {
     border-top: none;
+    min-height: inherit;
   }
 
   @include m.desktop {
-   color: #ffffff;
+    color: #ffffff;
   }
 }
 
-.site-list__item--current {
+.site-list__link--current {
   border-bottom: none;
 
   @include m.tablet {
@@ -33,12 +34,11 @@
 
   @include m.desktop {
     border-bottom: 2px solid #ffffff;
+    padding-bottom: 8px;
   }
 }
 
 .site-list__item {
-  min-height: 66px;
-
   @include m.tablet {
     min-height: 36px;
   }

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/main.js" defer ></script>
 </head>
 
 <body class="page-body">
@@ -21,21 +22,21 @@
         </picture>
         <img class="logo-image__logo-text" src="./img/logo-text.svg" alt="Cat energy" width="101" height="18">
       </a>
+      <button class="main-header__toggle main-header__toggle--closed" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
       <nav class="main-nav main-nav--form main-nav--opened main-nav--nojs">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current">
+          <li class="site-list__item">
             <a class="site-list__link link" href="./index.html">Главная</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link link" href="./catalog.html">каталог продукции</a>
           </li>
-          <li class="site-list__item site-list__item--current">
-            <a class="site-list__link link" href="./form.html">подбор программы</a>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--current link" href="./form.html">подбор программы</a>
           </li>
         </ul>
-        <button class="main-nav__toggle main-nav__toggle--closed" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
       </nav>
     </div>
   </header>
