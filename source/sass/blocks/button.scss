@@ -62,7 +62,7 @@
 }
 
 .button__secondary {
-  width: auto;
+  min-height: 40px;
 
   @include m.desktop {
     width: 192px;

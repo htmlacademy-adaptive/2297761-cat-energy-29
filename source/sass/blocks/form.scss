@@ -25,23 +25,63 @@
   margin-bottom: 39px;
 
   @include m.tablet {
+    width: 323px;
     font-size: 20px;
     line-height: 30px;
   }
 }
 
 .form__section-title {
+  position: relative;
   margin: 0;
-  margin-bottom: 20px;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  background-color: #ffffff;
+  z-index: 10;
+  padding-right: 20px;
 
   @include m.tablet {
     font-size: 36px;
     line-height: 36px;
+    padding-right: 40px;
   }
+}
+
+.form__section-title::before {
+  content: "";
+  background-color: #ffffff;
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  left: -39px;
+
+  @include m.tablet {
+    width: 40px;
+  }
+}
+
+.form__title-wrapper {
+  margin-bottom: 35px;
+  display: flex;
+  width: 202px;
+  background-color: #ffffff;
+
+  @include m.tablet {
+    width: auto;
+  }
+}
+
+.form__title-wrapper::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  border-bottom: 2px solid #68b738;
+  flex-grow: 1;
+  right: 0;
+  z-index: 1;
 }
 
 .form__title {
@@ -78,10 +118,25 @@
   flex-wrap: wrap;
   flex: 1;
   min-height: 39px;
+  border: 1px solid #e7e7e7;
+}
+
+.form__input-email {
+  background-image: url("../img/email.svg");
+  background-repeat: no-repeat;
+  background-position: 96% 40%;
+}
+
+.form__input-phone {
+  background-image: url("../img/phone.svg");
+  background-repeat: no-repeat;
+  background-position: 96% 40%;
 }
 
 .form__input::placeholder {
+  position: relative;
   padding-left: 14px;
+  padding-right: 12px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -97,8 +152,11 @@
 }
 
 .form__control {
+  position: relative;
   display: flex;
   gap: 15px;
+  height: 30px;
+  align-items: center;
 }
 
 .form-comment__textarea {
@@ -132,6 +190,7 @@
 
   @include m.tablet {
     width: 50%;
+    min-height: 52px;
   }
 }
 
@@ -145,10 +204,10 @@
   }
 }
 
-
 .form__control-wrapper {
   display: flex;
   flex-direction: column;
+  gap: 13px;
 
   @include m.tablet {
     display: grid;
@@ -159,6 +218,11 @@
 .form__container {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+
+  @include m.tablet {
+    margin-bottom: 65px;
+  }
 
   @include m.desktop {
     flex-direction: row;
@@ -166,14 +230,46 @@
   }
 }
 
-.fieldset__control {
-  width: 280px;
+.form__control-input {
+  position: absolute;
+  appearance: none;
 
-  @include m.tablet {
-    width: 628px;
+  &:checked + .form__radio {
+    background-image: url("../img/radio-check.svg");
   }
+}
 
-  @include m.desktop {
-    width: 570px;
+.form__radio {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/radio.svg");
+  margin-left: -42px;
+  top: 0;
+}
+
+.form__label-radio {
+  padding-left: 42px;
+}
+
+.form__control-input-checkbox {
+  position: absolute;
+  appearance: none;
+
+  &:checked + .form__checkbox {
+    background-image: url("../img/checkbox-check.svg");
   }
+}
+
+.form__checkbox {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/checkbox.svg");
+  margin-left: -42px;
+  top: 0;
+}
+
+.form__label-checkbox {
+  padding-left: 42px;
 }

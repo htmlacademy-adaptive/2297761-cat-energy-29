@@ -2,26 +2,28 @@
 @use "../mixins/media.scss" as m;
 
 .example {
-  background-color: #eaeaea;
+  background-color: v.$basic-gray;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
 
   @include m.tablet {
-    background-color: v.$basic-text;
+    background: linear-gradient(to top, v.$basic-gray, v.$basic-gray 462px, transparent 462px, transparent 100%);
+  }
+
+  @include m.desktop {
+    flex-direction: row;
+    gap: 100px;
+    background: linear-gradient(to bottom, transparent, transparent 160px, v.$basic-gray 160px, v.$basic-gray 100%);
   }
 }
 
 .example__wrapper {
-  width: 280px;
-  margin: 0 auto;
-  padding-top: 25px;
-
-  @include m.tablet {
-    width: 708px;
-  }
+  display: flex;
+  flex-direction: column;
 
   @include m.desktop {
-    width: 1220px;
-    display: flex;
-    gap: 100px;
+    flex-direction: row;
   }
 }
 
@@ -31,6 +33,7 @@
   font-weight: 400;
   line-height: 24px;
   text-transform: uppercase;
+  padding-top: 14px;
 
   @include m.desktop {
     font-size: 30px;
@@ -42,7 +45,6 @@
   display: flex;
   margin: 0;
   gap: 31px;
-  margin-bottom: 20px;
 }
 
 .example__item {
@@ -52,12 +54,55 @@
   min-height: 70px;
   justify-content: space-between;
   align-items: center;
+
+  @include m.tablet {
+    min-height: 77px;
+    width: 162px;
+  }
+}
+
+.example__item--first {
+  position: relative;
+}
+
+.example__item--first::after {
+  position: absolute;
+  content: "";
+  width: 124px;
+  height: 56px;
+  background-position: center;
+  border: 2px solid #cdcdcd;
+  border-radius: 2px;
+
+  @include m.tablet {
+    width: 162px;
+    min-height: 77px;
+  }
+}
+
+.example__item--second {
+  position: relative;
+}
+
+.example__item--second::after {
+  position: absolute;
+  content: "";
+  width: 124px;
+  height: 56px;
+  background-position: center;
+  border: 2px solid #cdcdcd;
+  border-radius: 2px;
+
+  @include m.tablet {
+    width: 162px;
+    min-height: 77px;
+  }
 }
 
 .example__description-title {
   margin: 0;
-  margin-top: 10px;
-  width: 77px;
+  max-width: 77px;
+  padding: 0 5px;
   text-align: center;
   font-family: "Lato", sans-serif;
   font-size: 12px;
@@ -65,10 +110,19 @@
   font-weight: 400;
   line-height: 100%;
   color: v.$special_dark-grey;
+  z-index: 5;
+  background-color: v.$basic-gray;
+
+  @include m.tablet {
+    background-color: #ffffff;
+    max-width: 125px;
+  }
 
   @include m.desktop {
+    max-width: 162px;
     font-size: 14px;
     line-height: 14px;
+    background-color: v.$basic-gray;
   }
 }
 
@@ -95,11 +149,14 @@
 .example__wrapper-list {
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
+  gap: 20px;
 
   @include m.tablet {
     flex-direction: row;
-    padding-top: 19px;
+    padding-top: 55px;
     justify-content: space-between;
+    margin-bottom: 116px;
   }
 
   @include m.desktop {
@@ -133,4 +190,8 @@
     flex-direction: row;
     justify-content: unset;
   }
+}
+
+.example__compare-container {
+  display: flex;
 }

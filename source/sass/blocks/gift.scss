@@ -9,21 +9,27 @@
   box-sizing: border-box;
   width: 100%;
   min-height: 290px;
-  background-color: #68b738d9;
-  margin-bottom: 35px;
+  background-image: linear-gradient(90deg, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/background-secondary.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 280px;
 
   @include m.tablet {
+    min-height: 200px;
     align-items: center;
     padding-right: 125px;
     justify-content: flex-end;
+    background-size: 708px;
+    background-image: linear-gradient(90deg, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/background-secondary-tablet.jpg");
   }
 
   @include m.desktop {
     width: 245px;
-    padding-bottom: 45px;
+    height: 288px;
     justify-content: space-around;
     align-items: flex-end;
-    margin-top: 100px;
+    background-image: linear-gradient(90deg, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/background-secondary-desktop.jpg");
+    background-size: 245px;
   }
 }
 
@@ -46,6 +52,8 @@
 
   @include m.desktop {
     text-align: center;
+    right: -57px;
+    bottom: 30px;
   }
 }
 
@@ -59,12 +67,12 @@
   right: 41px;
 
   @include m.tablet {
-    bottom: 0;
-    right: calc(117% * 3);
+    bottom: -19px;
+    right: 395px;
   }
 
   @include m.desktop {
-    bottom: 109px;
-    right: 41px;
+    bottom: 81px;
+    right: 31%;
   }
 }

@@ -21,19 +21,53 @@
 
 .main-header--main {
   background-color: v.$basic-text;
-
-  @include m.desktop {
-    background: linear-gradient(to right, v.$basic-text 50%, v.$basic-green 50%);
-    width: 100%;
-  }
+  align-items: center;
+  display: flex;
 }
 
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding-top: 13px;
+
+  @include m.tablet {
+    padding-top: 25px;
+  }
+
+  @include m.desktop {
+    padding-top: 55px;
+  }
 }
 
 .main-header--form {
   background-color: v.$basic-text;
+
+  .site-list__link--current {
+    @include m.tablet {
+      border-bottom: 2px solid v.$basic-green;
+    }
+  }
+}
+
+.main-header__toggle {
+  display: flex;
+  border: none;
+  width: 24px;
+  background-color: transparent;
+  height: 18px;
+  background-image: url("../img/toggle.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  &--closed {
+    background-image: url("../img/cros.svg");
+    width: 20px;
+    height: 20px;
+  }
+
+  @include m.tablet {
+    display: none;
+  }
 }

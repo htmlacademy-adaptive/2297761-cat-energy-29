@@ -6,7 +6,12 @@
   min-height: 240px;
 
   @include m.tablet {
+    display: flex;
     min-height: 147px;
+  }
+
+  @include m.desktop {
+    min-height: 169px;
   }
 }
 
@@ -14,19 +19,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  width: 280px;
   gap: 36px;
-  padding-top: 40px;
+  padding-bottom: 40px;
 
   @include m.tablet {
     width: 708px;
+    padding-bottom: 0;
     flex-direction: row;
     justify-content: space-between;
   }
 
   @include m.desktop {
-    width: auto;
+    width: 100%;
   }
 }
 

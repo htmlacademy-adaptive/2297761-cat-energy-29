@@ -16,7 +16,6 @@
     width: 324px;
     min-height: 511px;
     padding: 0 37px 40px;
-    background: linear-gradient(transparent 20%, v.$special_grey 80%);
   }
 
   @include m.desktop {
@@ -24,8 +23,17 @@
   }
 }
 
+.card--normal {
+  background-color: #ffffff;
+
+  @include m.tablet {
+    background: linear-gradient(to bottom, transparent, transparent 100px, #eaeaea 100px, #ebebeb 100%);
+  }
+}
+
 .card__content {
   display: flex;
+  align-items: center;
 
   @include m.tablet {
     flex-direction: column;
@@ -88,30 +96,12 @@
   @include m.tablet {
     font-size: 16px;
     line-height: 20px;
+    width: 170px;
+    text-align: center;
   }
 
   @include m.desktop {
     width: 100%;
-  }
-}
-
-.card__image-wrapper {
-  width: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  @include m.tablet {
-    width: 200px;
-    margin: auto;
-    height: 210px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  @include m.desktop {
-    width: auto;
   }
 }
 

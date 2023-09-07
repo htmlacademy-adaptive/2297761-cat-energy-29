@@ -4,7 +4,6 @@
 .hero {
   min-height: 480px;
   background: linear-gradient(v.$basic-green 63%, v.$basic-text 37%);
-  margin-bottom: 20px;
 
   @include m.tablet {
     min-height: 875px;
@@ -12,27 +11,55 @@
   }
 
   @include m.desktop {
-    min-height: 480px;
+    min-height: 508px;
     background: linear-gradient(to left, v.$basic-green 50%, v.$basic-text 50%);
     margin-bottom: 80px;
   }
 }
 
+.hero::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 320px;
+
+  @include m.tablet {
+    display: none;
+  }
+
+  @include m.desktop {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/hero-background-desktop.jpg");
+    background-size: cover;
+    background-position: right;
+    width: 50%;
+    height: 720px;
+    left: auto;
+    right: 0;
+    top: 0;
+  }
+}
+
 .hero__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 280px;
+  width: 320px;
   min-height: 454px;
-  margin: 0 auto;
   padding-top: 27px;
   text-align: center;
 
   @include m.tablet {
     width: 100%;
-    margin: 0;
-    padding-top: 47px;
-    padding-left: 94px;
+    padding-top: 106px;
+    padding-left: 80px;
     text-align: start;
     justify-content: normal;
   }
@@ -96,14 +123,14 @@
   @include m.tablet {
     z-index: 1;
     position: absolute;
-    top: 32%;
+    top: 52%;
     left: 12%;
   }
 
   @include m.desktop {
     z-index: 3;
     position: absolute;
-    top: 9%;
-    left: 37%;
+    top: 15px;
+    left: 447px;
   }
 }

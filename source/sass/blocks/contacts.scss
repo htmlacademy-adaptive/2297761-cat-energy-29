@@ -3,7 +3,7 @@
 
 .contacts__wrapper {
   display: flex;
-  width: 280px;
+  justify-content: space-between;
   margin: 0 auto;
   min-height: 112px;
   padding-top: 27px;
@@ -73,4 +73,9 @@
 .contacts__text-item {
   padding: 0;
   margin: 0;
+}
+
+.map {
+  width: 600px;
+  height: 400px;
 }

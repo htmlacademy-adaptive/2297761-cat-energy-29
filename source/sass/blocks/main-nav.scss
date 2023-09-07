@@ -1,29 +1,66 @@
 @use "../mixins/media.scss" as m;
 @use "../global/variables.scss" as v;
 
+/*.main-nav__closed .toggle:active::before {
+  opacity: 0.3;
+}
 
-.main-nav {
-  position: absolute;
+.main-nav__closed .main-nav__list {
+  display: none;
+}
+
+.main-nav__closed .main-nav {
+  display: none;
+}
+
+.main-nav__closed .toggle__closed {
+  display: none;
+}
+
+.main-nav__closed .toggle {
+  display: block;
+}
+
+.main-nav__opened .main-nav__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  left: 0;
   top: 100%;
-  width: 100%;
+  min-width: 320px;
   min-height: 198px;
   background-color: #ffffff;
   z-index: 3;
+}
+
+.main-nav__opened .toggle__closed {
+  display: block;
+}*/
+.main-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-width: 198px;
+  background-color: #ffffff;
+  z-index: 3;
   display: none;
+  flex-direction: column;
+
+  &--opened {
+    display: block;
+  }
 
   @include m.tablet {
     position: static;
-    display: block;
-    width: auto;
-    min-height: 50px;
+    display: flex;
+    align-items: flex-end;
   }
 
   @include m.desktop {
-    position: static;
-    display: block;
-    width: auto;
-    min-height: 59px;
-    background-color: v.$basic-green;
+    background-color: transparent;
   }
 }
 
@@ -35,22 +72,49 @@
   background-color: v.$basic-text;
 }
 
+.main-nav--form .site-list a {
+  @include m.desktop {
+    color: #000000;
+  }
+}
+
+.main-nav--form .site-list__item--current {
+  @include m.desktop {
+    border-bottom: 2px solid v.$basic-green;
+  }
+}
+
 .main-nav__list {
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: uppercase;
-  align-items: center;
 
   @include m.tablet {
+    position: static;
+    width: auto;
+    min-height: 50px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 33px;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @include m.desktop {
+    position: relative;
+    width: auto;
+    min-height: 59px;
+    background-color: transparent;
+  }
+}
+
+.main-nav--no-js {
+  .main-header__toggle {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
   }
 }

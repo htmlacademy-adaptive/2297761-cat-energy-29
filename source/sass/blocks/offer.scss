@@ -1,16 +1,13 @@
 @use "../global/variables.scss" as v;
 @use "../mixins/media.scss" as m;
 
-.offer__wrapper {
-  width: 280px;
-  margin: 0 auto;
-
+.offer {
   @include m.tablet {
-    width: 708px;
+    margin-top: 0;
   }
 
   @include m.desktop {
-    width: 1220px;
+    margin-top: 160px;
   }
 }
 
@@ -54,7 +51,12 @@
   }
 }
 
+.offer__item--first {
+  position: relative;
+}
+
 .offer__title {
+  padding-left: 90px;
   margin: 0;
   font-size: 24px;
   font-weight: 400;
@@ -65,38 +67,31 @@
   @include m.tablet {
     font-size: 36px;
     line-height: 36px;
-  }
-}
-
-.offer__title--first {
-  position: relative;
-  margin-left: 89px;
-
-  @include m.tablet {
-    margin-left: 0;
+    padding-left: 0;
   }
 
   @include m.desktop {
-    margin-left: 221px;
+    padding-left: 221px;
   }
 }
 
-.offer__title--first::after {
+.offer__item--first::after {
   position: absolute;
   content: "";
   background-image: url("../img/cat-slim.svg");
   width: 36px;
   height: 50px;
-  top: -9px;
-  left: -61px;
+  top: 27px;
+  left: 21px;
 
   @include m.tablet {
     width: 140px;
     height: 194px;
     background-size: 140px 194px;
     background-repeat: no-repeat;
-    top: -9px;
-    left: 453px;
+    top: 81px;
+    left: auto;
+    right: 92px;
   }
 
   @include m.desktop {
@@ -104,12 +99,13 @@
     height: 97px;
     background-size: 70px 97px;
     background-repeat: no-repeat;
-    top: -55px;
-    left: -206px;
+    top: 41px;
+    left: 67px;
+    right: auto;
   }
 }
 
-.offer__title--first::before {
+.offer__item--first::before {
   position: absolute;
   content: "";
   border-radius: 100%;
@@ -117,54 +113,48 @@
   z-index: 0;
   width: 50px;
   height: 50px;
-  right: 128px;
-  top: -9px;
+  left: 21px;
+  top: 21px;
 
   @include m.tablet {
     width: 200px;
     height: 200px;
-    right: -450px;
-    top: -9px;
+    right: 91px;
+    top: 63px;
+    left: auto;
   }
 
   @include m.desktop {
     width: 100px;
     height: 100px;
-    right: 280px;
-    top: -54px;
+    right: auto;
+    top: 47px;
+    left: 52px;
   }
 }
 
-.offer__title--second {
+.offer__item--second {
   position: relative;
-  margin-left: 91px;
-
-  @include m.tablet {
-    margin-left: 0;
-  }
-
-  @include m.desktop {
-    margin-left: 221px;
-  }
 }
 
-.offer__title--second::after {
+.offer__item--second::after {
   position: absolute;
   content: "";
   background-image: url("../img/cat-pro.svg");
   background-repeat: no-repeat;
   width: 67px;
   height: 28px;
-  top: 5px;
-  left: -78px;
+  top: 35px;
+  left: 21px;
 
   @include m.tablet {
     width: 268px;
     height: 112px;
     background-size: 268px 112px;
     background-repeat: no-repeat;
-    top: -9px;
-    left: 354px;
+    top: 135px;
+    left: auto;
+    right: 28px;
   }
 
   @include m.desktop {
@@ -172,12 +162,13 @@
     height: 56px;
     background-size: 134px 56px;
     background-repeat: no-repeat;
-    top: -9px;
-    left: -224px;
+    top: 67px;
+    left: 33px;
+    right: auto;
   }
 }
 
-.offer__title--second::before {
+.offer__item--second::before {
   position: absolute;
   content: "";
   border-radius: 100%;
@@ -185,21 +176,23 @@
   z-index: 0;
   width: 50px;
   height: 50px;
-  right: 152px;
-  top: -6px;
+  left: 22px;
+  top: 21px;
 
   @include m.tablet {
     width: 200px;
     height: 200px;
-    right: -413px;
-    top: -45px;
+    right: 63px;
+    top: 91px;
+    left: auto;
   }
 
   @include m.desktop {
     width: 100px;
     height: 100px;
-    right: 301px;
-    top: -46px;
+    right: auto;
+    top: 47px;
+    left: 52px;
   }
 }
 
@@ -212,18 +205,30 @@
   @include m.tablet {
     padding: 0;
     width: 340px;
+    margin-top: 24px;
   }
 
   @include m.desktop {
     width: 457px;
+    margin-top: 73px;
   }
 }
 
 .offer__button {
-  min-width: 134px;
+  min-width: 200px;
   padding-left: 20px;
+  background-image: url("../img/icon_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 79%;
+  width: 32px;
+  height: 12px;
 
   @include m.tablet {
     padding-left: 0;
   }
+}
+
+.offer__button:hover {
+  background-image: url("../img/icon_arrow-2.svg");
+  opacity: 0.3;
 }
