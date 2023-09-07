@@ -17,10 +17,14 @@
   @include m.tablet {
     border-top: none;
     min-height: inherit;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   @include m.desktop {
     color: #ffffff;
+    font-size: 20px;
+    line-height: normal;
   }
 }
 
@@ -29,12 +33,10 @@
 
   @include m.tablet {
     border-bottom: 2px solid v.$basic-green;
-    padding-bottom: 5px;
   }
 
   @include m.desktop {
     border-bottom: 2px solid #ffffff;
-    padding-bottom: 8px;
   }
 }
 

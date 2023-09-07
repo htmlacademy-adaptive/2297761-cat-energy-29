@@ -2,9 +2,6 @@
 @use "../mixins/media.scss" as m;
 
 .main-catalog {
-  width: 280px;
-  margin: 0 auto;
-
   @include m.tablet {
     width: auto;
   }
@@ -30,12 +27,14 @@
 .main-catalog__item {
   padding-top: 11px;
   padding-bottom: 14px;
+  border-bottom: 1px solid #cdcdcd;
 
   @include m.tablet {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: none;
   }
 }
 

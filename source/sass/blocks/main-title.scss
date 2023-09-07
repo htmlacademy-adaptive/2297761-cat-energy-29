@@ -13,3 +13,12 @@
     line-height: 60px;
   }
 }
+
+.main-title__wrapper {
+  border-bottom: 1px solid #cdcdcd;
+  border-top: 1px solid #cdcdcd;
+
+  @include m.tablet {
+    border: none;
+  }
+}

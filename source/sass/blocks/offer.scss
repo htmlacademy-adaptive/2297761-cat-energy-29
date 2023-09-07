@@ -215,15 +215,20 @@
 }
 
 .offer__button {
-  min-width: 140px;
+  min-width: 200px;
   padding-left: 20px;
   background-image: url("../img/icon_arrow.svg");
   background-repeat: no-repeat;
-  background-position: 107%;
+  background-position: 79%;
   width: 32px;
   height: 12px;
 
   @include m.tablet {
     padding-left: 0;
   }
+}
+
+.offer__button:hover {
+  background-image: url("../img/icon_arrow-2.svg");
+  opacity: 0.3;
 }

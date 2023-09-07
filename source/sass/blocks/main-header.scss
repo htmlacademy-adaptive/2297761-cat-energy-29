@@ -23,10 +23,6 @@
   background-color: v.$basic-text;
   align-items: center;
   display: flex;
-
-  @include m.desktop {
-    padding-top: 55px;
-  }
 }
 
 .main-header__wrapper {
@@ -34,6 +30,15 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-top: 13px;
+
+  @include m.tablet {
+    padding-top: 25px;
+  }
+
+  @include m.desktop {
+    padding-top: 55px;
+  }
 }
 
 .main-header--form {
@@ -42,7 +47,6 @@
   .site-list__link--current {
     @include m.tablet {
       border-bottom: 2px solid v.$basic-green;
-      padding-bottom: 5px;
     }
   }
 }

@@ -2,65 +2,75 @@
 @use "../mixins/media.scss" as m;
 
 .secondary-catalog {
-  width: 280px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 35px;
 
   @include m.tablet {
-    width: auto;
+    margin-bottom: 76px;
   }
 
   @include m.desktop {
-    flex-direction: row;
-    justify-content: space-between;
+    margin-bottom: 86px;
   }
 }
 
-.secondary-catalog__wrapper {
-  width: auto;
-
-  @include m.tablet {
-    width: 632px;
-    margin: auto;
-  }
-
-  @include m.desktop {
-    width: 100%;
-  }
+.secondary-catalog__name {
+  position: relative;
 }
 
-.secondary-catalog__name-wrapper {
-  display: flex;
-  gap: 20px;
-  line-height: 24px;
-  font-size: 24px;
+.secondary-catalog__name::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: v.$basic-green;
+  z-index: -1;
+}
+
+.secondary-catalog__name-title {
+  max-width: max-content;
+  padding: 25px 20px 34px;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  color: #000000;
   background-color: #ffffff;
+  display: inline-block;
+  margin: 0;
 
   @include m.tablet {
     line-height: 36px;
     font-size: 36px;
   }
+
+  @include m.desktop {
+    padding: 0 35px 0 40px;
+    margin-left: -40px;
+  }
 }
 
-.secondary-catalog__name-wrapper::after {
-  position: absolute;
-  content: "";
-  height: 70px;
-  width: 100%;
-  right: 0;
-  z-index: 1;
-  border-bottom: 2px solid #000000;
-  flex-grow: 1;
+.secondary-catalog__name-wrapper {
+  @include m.tablet {
+    max-width: 100%;
+    margin: 0 30px;
+  }
+
+  @include m.desktop {
+    margin: 0 auto;
+    padding: 0 110px;
+  }
 }
 
-.secondary-catalog__name-title {
-  max-width: max-content;
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: #ffffff;
-  z-index: 10;
+.secondary-catalog__wrapper {
+  @include m.desktop {
+    margin-top: 76px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 245px;
+    column-gap: 80px;
+  }
 }
 //.secondary-catalog__title {
 //font-weight: 400;
@@ -76,10 +86,34 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
+  border-top: 1px solid v.$special_grey;
+
+  @include m.tablet {
+    margin-top: 76px;
+    margin-bottom: 69px;
+  }
 
   @include m.desktop {
-    margin-right: 81px;
+    grid-column: 1 / 4;
+    margin: 0;
+  }
+}
+
+.secondary-catalog__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid v.$special_grey;
+  width: 100%;
+
+  @include m.tablet {
+    padding: 25px 38px 29px;
+  }
+
+  @include m.desktop {
+    padding: 15px 0 16px;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -87,13 +121,12 @@
   display: flex;
   flex-direction: column;
   gap: 13px;
-  padding-top: 13px;
-  padding-bottom: 19px;
   box-sizing: border-box;
 
   @include m.desktop {
     flex-direction: row;
     justify-content: space-between;
+    width: 895px;
   }
 }
 

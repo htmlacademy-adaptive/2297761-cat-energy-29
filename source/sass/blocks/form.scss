@@ -32,6 +32,7 @@
 }
 
 .form__section-title {
+  position: relative;
   margin: 0;
   font-size: 24px;
   font-style: normal;
@@ -39,26 +40,36 @@
   line-height: 26px;
   background-color: #ffffff;
   z-index: 10;
-  padding-left: 20px;
   padding-right: 20px;
 
   @include m.tablet {
     font-size: 36px;
     line-height: 36px;
-    padding-left: 40px;
     padding-right: 40px;
+  }
+}
+
+.form__section-title::before {
+  content: "";
+  background-color: #ffffff;
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  left: -39px;
+
+  @include m.tablet {
+    width: 40px;
   }
 }
 
 .form__title-wrapper {
   margin-bottom: 35px;
   display: flex;
-  gap: 20px;
-  max-width: 227px;
+  width: 202px;
   background-color: #ffffff;
 
   @include m.tablet {
-    max-width: 594px;
+    width: auto;
   }
 }
 

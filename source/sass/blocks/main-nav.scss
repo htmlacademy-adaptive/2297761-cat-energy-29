@@ -56,7 +56,6 @@
   @include m.tablet {
     position: static;
     display: flex;
-    padding-top: 10px;
     align-items: flex-end;
   }
 
@@ -104,7 +103,6 @@
 
   @include m.desktop {
     position: relative;
-    align-items: flex-end;
     width: auto;
     min-height: 59px;
     background-color: transparent;

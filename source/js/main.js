@@ -12,4 +12,4 @@ toogleButtonElement.addEventListener('click', function () {
 var image = {
   url: '/img/map-logo.png',
   scaledSize : new google.maps.Size(57, 53),
-  };
+};
