@@ -1,6 +1,29 @@
+@use "../mixins/media.scss" as m;
+
+.logo-image {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include m.desktop {
+    width: 202px;
+  }
+}
+
+.logo-image__logo-image {
+  margin: 0;
+}
+
 .logo-image__logo-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  height: 18px;
+
+  @include m.tablet {
+    display: none;
+  }
+
+  @include m.desktop {
+    display: none;
+  }
 }

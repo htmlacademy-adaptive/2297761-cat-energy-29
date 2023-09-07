@@ -1,3 +1,6 @@
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
 .button {
   display: inline-block;
   text-transform: uppercase;
@@ -7,14 +10,29 @@
 .button--type-primary {
   display: flex;
   justify-content: space-around;
-  height: 40px;
+  min-height: 40px;
   width: 100%;
-  color: #ffffff;
+  color: v.$basic-text;
   font-size: 14px;
   font-weight: 400;
   align-items: center;
-  background-color: #68b738;
+  background-color: v.$basic-green;
   border: none;
+
+  @include m.tablet {
+    width: 100%;
+    min-height: 54px;
+    font-size: 16px;
+    line-height: 20px;
+    color: v.$basic-text;
+  }
+
+  @include m.desktop {
+    width: 100%;
+    font-size: 20px;
+    line-height: 20px;
+    color: v.$basic-text;
+  }
 }
 
 .button--type-transition {
@@ -25,6 +43,11 @@
   line-height: 16px;
   font-weight: 400;
   align-items: center;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: normal;
+  }
 }
 
 .button--card {
@@ -35,5 +58,22 @@
 
 .button--add {
   background-color: #f2f2f2;
-  color: #444444;
+  color: v.$special_dark-grey;
+}
+
+.button__secondary {
+  min-height: 40px;
+
+  @include m.desktop {
+    width: 192px;
+  }
+}
+
+.button--hero {
+  width: 100%;
+
+  @include m.tablet {
+    width: 244px;
+    z-index: 2;
+  }
 }

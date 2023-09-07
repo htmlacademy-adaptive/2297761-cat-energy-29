@@ -1,3 +1,47 @@
-.site-list__link {
+@use "../mixins/media.scss" as m;
+@use "../global/variables.scss" as v;
+
+.site-list a {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  align-items: center;
   color: #000000;
+  border-top: 1px solid #e6e6e6;
+  min-height: 66px;
+
+  @include m.tablet {
+    border-top: none;
+    min-height: inherit;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include m.desktop {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.site-list__link--current {
+  border-bottom: none;
+
+  @include m.tablet {
+    border-bottom: 2px solid v.$basic-green;
+  }
+
+  @include m.desktop {
+    border-bottom: 2px solid #ffffff;
+  }
+}
+
+.site-list__item {
+  @include m.tablet {
+    min-height: 36px;
+  }
 }

@@ -1,34 +1,136 @@
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
 .hero {
   min-height: 480px;
-  background: linear-gradient(#68b738d9 63%, #ffffff 37%);
+  background: linear-gradient(v.$basic-green 63%, v.$basic-text 37%);
+
+  @include m.tablet {
+    min-height: 875px;
+    background: v.$basic-text;
+  }
+
+  @include m.desktop {
+    min-height: 508px;
+    background: linear-gradient(to left, v.$basic-green 50%, v.$basic-text 50%);
+    margin-bottom: 80px;
+  }
+}
+
+.hero::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 320px;
+
+  @include m.tablet {
+    display: none;
+  }
+
+  @include m.desktop {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: linear-gradient(90deg, #68b738d9, #68b738d9), url("../img/hero-background-desktop.jpg");
+    background-size: cover;
+    background-position: right;
+    width: 50%;
+    height: 720px;
+    left: auto;
+    right: 0;
+    top: 0;
+  }
 }
 
 .hero__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 280px;
+  width: 320px;
   min-height: 454px;
-  margin: 0 auto;
   padding-top: 27px;
   text-align: center;
+
+  @include m.tablet {
+    width: 100%;
+    padding-top: 106px;
+    padding-left: 80px;
+    text-align: start;
+    justify-content: normal;
+  }
 }
 
 .hero__title {
   margin: 0;
   margin-bottom: 25px;
-  color: #ffffff;
+  color: v.$basic-text;
   text-align: center;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
+
+  @include m.tablet {
+    width: 416px;
+    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    text-align: start;
+  }
+
+  @include m.desktop {
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+  }
 }
 
 .hero__slogan {
   margin: 0;
-  color: #ffffff;
+  color: v.$basic-text;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 14px;
+
+  @include m.tablet {
+    margin-bottom: 51px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  @include m.desktop {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+  }
+}
+
+.hero__header {
+  position: relative;
+}
+
+.hero__img-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include m.tablet {
+    z-index: 1;
+    position: absolute;
+    top: 52%;
+    left: 12%;
+  }
+
+  @include m.desktop {
+    z-index: 3;
+    position: absolute;
+    top: 15px;
+    left: 447px;
+  }
 }

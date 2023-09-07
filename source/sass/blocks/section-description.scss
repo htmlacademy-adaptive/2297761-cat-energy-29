@@ -1,0 +1,16 @@
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+.section-description {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  color: v.$special_dark-grey;
+
+  @include m.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

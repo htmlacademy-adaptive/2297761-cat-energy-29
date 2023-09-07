@@ -1,6 +1,24 @@
+@use "../mixins/media.scss" as m;
+@use "../global/variables.scss" as v;
+
 .page-body {
-  width: 320px;
-  margin: 0 auto;
+  width: 100%;
   font-family: "Oswald", sans-serif;
-  background-color: #ffffff;
+  background-color: v.$basic-text;
+  margin: 0 auto;
+}
+
+.page-body__container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 280px;
+
+  @include m.tablet {
+    max-width: 708px;
+  }
+
+  @include m.desktop {
+    padding: 0;
+    max-width: 1220px;
+  }
 }

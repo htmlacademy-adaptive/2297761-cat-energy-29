@@ -1,10 +1,14 @@
-.offer {
-  width: 320px;
-}
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
 
-.offer__wrapper {
-  width: 280px;
-  margin: 0 auto;
+.offer {
+  @include m.tablet {
+    margin-top: 0;
+  }
+
+  @include m.desktop {
+    margin-top: 160px;
+  }
 }
 
 .offer__list {
@@ -13,52 +17,183 @@
   margin: 0;
 }
 
+.offer-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @include m.desktop {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+  }
+}
+
 .offer__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
   padding-top: 30px;
-  background-color: #f2f2f2;
-  margin-top: 20px;
+  background-color: v.$basic-gray;
   min-height: 266px;
   box-sizing: border-box;
+
+  @include m.tablet {
+    padding-top: 77px;
+    padding-left: 52px;
+    min-height: 372px;
+  }
+
+  @include m.desktop {
+    width: 570px;
+  }
+}
+
+.offer__item--first {
+  position: relative;
 }
 
 .offer__title {
+  padding-left: 90px;
   margin: 0;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
   text-transform: uppercase;
   text-align: center;
+
+  @include m.tablet {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 0;
+  }
+
+  @include m.desktop {
+    padding-left: 221px;
+  }
 }
 
-.offer__title--first {
-  position: relative;
-  padding-left: 9px;
-}
-
-.offer__title--first::after {
+.offer__item--first::after {
   position: absolute;
   content: "";
   background-image: url("../img/cat-slim.svg");
   width: 36px;
   height: 50px;
-  top: -9px;
-  left: 27px;
+  top: 27px;
+  left: 21px;
+
+  @include m.tablet {
+    width: 140px;
+    height: 194px;
+    background-size: 140px 194px;
+    background-repeat: no-repeat;
+    top: 81px;
+    left: auto;
+    right: 92px;
+  }
+
+  @include m.desktop {
+    width: 70px;
+    height: 97px;
+    background-size: 70px 97px;
+    background-repeat: no-repeat;
+    top: 41px;
+    left: 67px;
+    right: auto;
+  }
 }
 
-.offer__title--second {
+.offer__item--first::before {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  background-color: v.$basic-green;
+  z-index: 0;
+  width: 50px;
+  height: 50px;
+  left: 21px;
+  top: 21px;
+
+  @include m.tablet {
+    width: 200px;
+    height: 200px;
+    right: 91px;
+    top: 63px;
+    left: auto;
+  }
+
+  @include m.desktop {
+    width: 100px;
+    height: 100px;
+    right: auto;
+    top: 47px;
+    left: 52px;
+  }
+}
+
+.offer__item--second {
   position: relative;
-  padding-left: 37px;
 }
 
-.offer__title--second::after {
+.offer__item--second::after {
   position: absolute;
   content: "";
   background-image: url("../img/cat-pro.svg");
   background-repeat: no-repeat;
   width: 67px;
   height: 28px;
-  top: 5px;
-  left: 13px;
+  top: 35px;
+  left: 21px;
+
+  @include m.tablet {
+    width: 268px;
+    height: 112px;
+    background-size: 268px 112px;
+    background-repeat: no-repeat;
+    top: 135px;
+    left: auto;
+    right: 28px;
+  }
+
+  @include m.desktop {
+    width: 134px;
+    height: 56px;
+    background-size: 134px 56px;
+    background-repeat: no-repeat;
+    top: 67px;
+    left: 33px;
+    right: auto;
+  }
+}
+
+.offer__item--second::before {
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  background-color: v.$basic-green;
+  z-index: 0;
+  width: 50px;
+  height: 50px;
+  left: 22px;
+  top: 21px;
+
+  @include m.tablet {
+    width: 200px;
+    height: 200px;
+    right: 63px;
+    top: 91px;
+    left: auto;
+  }
+
+  @include m.desktop {
+    width: 100px;
+    height: 100px;
+    right: auto;
+    top: 47px;
+    left: 52px;
+  }
 }
 
 .offer__description {
@@ -66,9 +201,34 @@
   margin-bottom: 31px;
   padding-left: 20px;
   padding-right: 33px;
+
+  @include m.tablet {
+    padding: 0;
+    width: 340px;
+    margin-top: 24px;
+  }
+
+  @include m.desktop {
+    width: 457px;
+    margin-top: 73px;
+  }
 }
 
 .offer__button {
-  min-width: 134px;
+  min-width: 200px;
   padding-left: 20px;
+  background-image: url("../img/icon_arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 79%;
+  width: 32px;
+  height: 12px;
+
+  @include m.tablet {
+    padding-left: 0;
+  }
+}
+
+.offer__button:hover {
+  background-image: url("../img/icon_arrow-2.svg");
+  opacity: 0.3;
 }

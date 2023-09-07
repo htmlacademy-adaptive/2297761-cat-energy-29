@@ -1,12 +1,7 @@
-.map {
-  position: relative;
-  width: 100%;
-  height: 362px;
-  background-image: url("../img/background-map.jpg");
-}
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
 
-.map__image {
-  position: absolute;
-  top: 39%;
-  left: 42%;
+.map {
+  width: 100%;
+  height: 400px;
 }

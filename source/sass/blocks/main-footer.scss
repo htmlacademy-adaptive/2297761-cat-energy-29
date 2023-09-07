@@ -1,21 +1,47 @@
+@use "../global/variables.scss" as v;
+@use "../mixins/media.scss" as m;
+
+
 .main-footer {
   min-height: 240px;
+
+  @include m.tablet {
+    display: flex;
+    min-height: 147px;
+  }
+
+  @include m.desktop {
+    min-height: 169px;
+  }
 }
 
 .main-footer__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  width: 280px;
   gap: 36px;
-  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include m.tablet {
+    width: 708px;
+    padding-bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include m.desktop {
+    width: 100%;
+  }
 }
 
 .main-footer__copyright {
   display: flex;
   justify-content: space-between;
   width: 280px;
+
+  @include m.tablet {
+    width: 168px;
+  }
 }
 
 .main-footer--background {
@@ -23,5 +49,5 @@
 }
 
 .main-footer__logo {
-  fill: #444444;
+  fill: v.$special_dark-grey;
 }
